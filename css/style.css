@@ -41,8 +41,12 @@ h2 :is(span) {
     padding: 10px;
     font-size: 40px;
     color: #FFD600;
+    border: #FFD600;
+    width: 15%;
+    margin-left: 40%;
+    backdrop-filter: blur(20px);
 }
-footer {
+footer { */
     display: flex;
     flex-direction: column;
     text-align: center;
