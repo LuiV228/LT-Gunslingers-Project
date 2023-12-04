@@ -1,1 +1,1 @@
-// Product JavaScript
+document.querySelector(`#currentYear`).textContent = new Date().getUTCFullYear()

@@ -30,6 +30,9 @@ body {
 ::placeholder {
     color: #000 !important;
 }
+form :is(input) {
+    color: #000 !important;
+}
 #searchbar {
     background-color: #FFD600 !important;
     color: #000 !important;

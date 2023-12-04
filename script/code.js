@@ -1,1 +1,1 @@
-// Home JavaScript
+document.querySelector(`#currentYear`).innerHTML = new Date().getUTCFullYear()
