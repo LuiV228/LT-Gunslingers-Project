@@ -1,5 +1,58 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: 'Mina';
+}
 #logo {
     width: 70px;
     height: 70px;
     border-radius: 50%;
+}
+.navbar {
+    background-color: black !important;
+}
+.nav-link {
+    color: #FFD600 !important;
+}
+.form-control {
+    background-color: white !important;
+}
+::placeholder {
+    color: #000 !important;
+}
+#searchbar {
+    background-color: #FFD600 !important;
+    color: #000 !important;
+}
+
+h2 :is(span) {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    color: #FFD600;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    background-color: black;
+    color: #FFD600;
+    text-align: center;
+}
+.lead {
+    padding-top: 20px;
 }
