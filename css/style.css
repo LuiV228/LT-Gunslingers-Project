@@ -52,16 +52,30 @@ h2 :is(span) {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-footer { */
+img {
+    background-attachment: fixed;
+}
+footer {
     display: flex;
-    flex-direction: column;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     justify-content: center;
     background-color: black;
     color: #FFD600;
     text-align: center;
+}
+.footer {
+    padding: 20px;
+}
+a {
+    color: #FFD600;
+    background-color: transparent;
+    text-decoration: none;
+}
+i {
+    font-size: large;
+    padding: 5px;
 }
 .lead {
     padding-top: 20px;
