@@ -54,9 +54,8 @@ h2 :is(span) {
 }
 footer {
   display: flex;
+  flex-direction: column;
   text-align: center;
-  position: ;
-  bottom: 0;
   justify-content: center;
   background-color: black;
   color: #ffd600;
@@ -78,6 +77,19 @@ i {
   padding-top: 20px;
 }
 .card {
-  width: 17.87%;
-
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+  border-radius: 10px;
+}
+#products {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card-body {
+  background-color: #000;
+  color: #ffd600;
 }

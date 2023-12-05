@@ -46,9 +46,9 @@ let products = JSON.parse(localStorage.getItem(`products`))
           price: 15000,
         },
         {
-          image: `/Gun Backgrounds/LT Products/Pistols/uger 57.webp`,
+          image: `/Gun Backgrounds/LT Products/Pistols/Ruger 57.webp`,
           id: 6,
-          name: `uger 57`,
+          name: `Ruger 57`,
           category: `Pistols`,
           price: 16000,
         },
@@ -62,7 +62,7 @@ let products = JSON.parse(localStorage.getItem(`products`))
         {
           image: `/Gun Backgrounds/LT Products/Pistols/Smith _ Wesson M_P9 M2.0.jpg`,
           id: 8,
-          name: `Smith_Wesson M_P9 M2.0`,
+          name: `Smith_Wesson`,
           category: `Pistols`,
           price: 18000,
         },
@@ -146,7 +146,7 @@ let products = JSON.parse(localStorage.getItem(`products`))
         {
           image: `/Gun Backgrounds/LT Products/Submachine Guns/VFC UMP 45 DX GBB.jpg`,
           id: 20,
-          name: `VFC UMP 45 DX GBB`,
+          name: `VFC UMP 45 DX`,
           category: `Submachine Guns`,
           price: 30000,
         },
@@ -214,21 +214,21 @@ let products = JSON.parse(localStorage.getItem(`products`))
           price: 39000,
         },
         {
-          image: `/Gun Backgrounds/LT Products/Shotguns/emington 870 Synthetic.webp`,
+          image: `/Gun Backgrounds/LT Products/Shotguns/Remington 870 Synthetic.webp`,
           id: 30,
-          name: `emington 870 Synthetic`,
+          name: `Remington 870`,
           category: `Shotguns`,
           price: 40000,
         },
         {
           image: `/Gun Backgrounds/LT Products/Assault Rifles/CZ Bren 2 MS Carbine.jpg`,
           id: 31,
-          name: `CZ Bren 2 MS Carbine`,
+          name: `CZ Bren 2 MS`,
           category: `Assault Rifles`,
           price: 41000,
         },
         {
-          image: `/Gun Backgrounds/LT Products/Assault Rifles/HK 416 .22L.jpg`,
+          image: `/Gun Backgrounds/LT Products/Assault Rifles/HK 416 .22LR.jpg`,
           id: 32,
           name: `HK 416 .22L`,
           category: `Assault Rifles`,
@@ -265,14 +265,14 @@ let products = JSON.parse(localStorage.getItem(`products`))
         {
           image: `/Gun Backgrounds/LT Products/Assault Rifles/Sig Sauer M400 Tread.webp`,
           id: 37,
-          name: `Sig Sauer M400 Tread`,
+          name: `Sig Sauer M400`,
           category: `Assault Rifles`,
           price: 47000,
         },
         {
           image: `/Gun Backgrounds/LT Products/Assault Rifles/Sig Sauer MCX Spear-LT.webp`,
           id: 38,
-          name: `Sig Sauer MCX Spear-LT`,
+          name: `Sig Sauer MCX`,
           category: `Assault Rifles`,
           price: 48000,
         },
@@ -293,21 +293,21 @@ let products = JSON.parse(localStorage.getItem(`products`))
         {
           image: `/Gun Backgrounds/LT Products/Sniper Rifles/Accuracy International AS50.jpg`,
           id: 41,
-          name: `Accuracy International AS50`,
+          name: `International AS50`,
           category: `Sniper Rifles`,
           price: 51000,
         },
         {
           image: `/Gun Backgrounds/LT Products/Sniper Rifles/Barrett M82A1.webp`,
           id: 42,
-          name: `Barrett M82A1`,
+          name: `Barrett M82A1 Long Barrel`,
           category: `Sniper Rifles`,
           price: 52000,
         },
         {
-          image: `/Gun Backgrounds/LT Products/Sniper Rifles/Barrett MAD.jpg`,
+          image: `/Gun Backgrounds/LT Products/Sniper Rifles/Barrett MRAD.jpg`,
           id: 43,
-          name: `Barrett MAD`,
+          name: `Barrett MRAD Long Barrel`,
           category: `Sniper Rifles`,
           price: 53000,
         },
@@ -319,9 +319,9 @@ let products = JSON.parse(localStorage.getItem(`products`))
           price: 54000,
         },
         {
-          image: `/Gun Backgrounds/LT Products/Sniper Rifles/Desert Tech SS A2.jpg`,
+          image: `/Gun Backgrounds/LT Products/Sniper Rifles/Desert Tech SRS A2.jpg`,
           id: 45,
-          name: `Desert Tech SS A2`,
+          name: `Desert Tech SRS A2`,
           category: `Sniper Rifles`,
           price: 55000,
         },
@@ -349,14 +349,14 @@ let products = JSON.parse(localStorage.getItem(`products`))
         {
           image: `/Gun Backgrounds/LT Products/Sniper Rifles/Precision International AWM L115A3.jpg`,
           id: 49,
-          name: `Precision International AWM L115A3`,
+          name: `International AWM`,
           category: `Sniper Rifles`,
           price: 59000,
         },
         {
-          image: `/Gun Backgrounds/LT Products/Sniper Rifles/Sako TG 42.jpg`,
+          image: `/Gun Backgrounds/LT Products/Sniper Rifles/Sako TRG 42.jpg`,
           id: 50,
-          name: `Sako TG 42`,
+          name: `Sako TRG 42`,
           category: `Sniper Rifles`,
           price: 60000,
         },
@@ -370,13 +370,13 @@ function displayProducts() {
     products.forEach((product) => {
       // Add product HTML to the productTable
       pTable.innerHTML += `
-            <div class=" my-3 mx-3 card">
+            <div class=" my-3 mx-3 p-3 card bg-black">
             <img src="${product.image}" class=" card-img-top">
                 <div class="card-body">
                     <h5 class="card-title text-center">${product.name}</h5>
                     <p class="card-text text-center">${product.category}</p>
-                    <p class="card-text text-center">${product.price}.00</p>
-                    <a href="#" class="btn btn-dark d-flex justify-content-center">Add to Cart</a>
+                    <p class="card-text text-center">R${product.price}.00</p>
+                    <a href="#" class="btn btn-dark d-flex justify-content-center id="btn">Add to Cart</a>
                 </div>
             </div>
             `;
