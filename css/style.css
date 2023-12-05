@@ -1,82 +1,83 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    font-family: 'Mina';
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: "Mina";
 }
 #logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 .navbar {
-    background-color: black !important;
+  background-color: black !important;
 }
 .nav-link {
-    color: #FFD600 !important;
+  color: #ffd600 !important;
 }
 .form-control {
-    background-color: white !important;
+  background-color: white !important;
 }
 ::placeholder {
-    color: #000 !important;
+  color: #000 !important;
 }
 form :is(input) {
-    color: #000 !important;
+  color: #000 !important;
 }
 #searchbar {
-    background-color: #FFD600 !important;
-    color: #000 !important;
+  background-color: #ffd600 !important;
+  color: #000 !important;
 }
-
 h2 :is(span) {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    font-size: 40px;
-    color: #FFD600;
-    border: #FFD600;
-    width: 15%;
-    margin-left: 42.5%;
-    background-color: #000;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-img {
-    background-attachment: fixed;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+  color: #ffd600;
+  border: #ffd600;
+  width: 15%;
+  margin-left: 42.5%;
+  background-color: #000;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 footer {
-    display: flex;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    justify-content: center;
-    background-color: black;
-    color: #FFD600;
-    text-align: center;
+  display: flex;
+  text-align: center;
+  position: ;
+  bottom: 0;
+  justify-content: center;
+  background-color: black;
+  color: #ffd600;
+  text-align: center;
 }
 .footer {
-    padding: 20px;
+  padding: 20px;
 }
 a {
-    color: #FFD600;
-    background-color: transparent;
-    text-decoration: none;
+  color: #ffd600;
+  background-color: transparent;
+  text-decoration: none;
 }
 i {
-    font-size: large;
-    padding: 5px;
+  font-size: large;
+  padding: 5px;
 }
 .lead {
-    padding-top: 20px;
+  padding-top: 20px;
+}
+.card {
+  width: 17.87%;
+
 }
