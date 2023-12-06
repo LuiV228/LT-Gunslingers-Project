@@ -21,6 +21,7 @@ body {
 }
 .navbar {
   background-color: black !important;
+  position: sticky !important;
 }
 .nav-link {
   color: #ffd600 !important;
