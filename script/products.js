@@ -1,11 +1,10 @@
 document.querySelector(`#currentYear`).textContent =
   new Date().getUTCFullYear();
 
-let cart = [];
-let pTable = document.querySelector("[data-products]");
+let pTable = document.querySelector("[data-stock]");
 // console.log(pTable)
 
-let products = JSON.parse(localStorage.getItem(`products`))
+let stock = JSON.parse(localStorage.getItem(`products`))
   ? JSON.parse(localStorage.getItem(`products`))
   : localStorage.setItem(
       `products`,
@@ -363,11 +362,11 @@ let products = JSON.parse(localStorage.getItem(`products`))
       ])
     );
 
-function displayProducts() {
+function displayStock(data) {
   pTable.innerHTML = "";
-  if (products) {
+  if (data.length) {
     // loop through the product in array
-    products.forEach((product) => {
+    data.forEach((product) => {
       // Add product HTML to the productTable
       pTable.innerHTML += `
             <div class=" my-3 mx-3 p-3 card bg-black">
@@ -393,4 +392,66 @@ function displayProducts() {
 }
 
 // Call the function to display products
-displayProducts();
+displayStock(stock);
+
+// Get a reference to the search input element
+let searchedStock = document.querySelector(`[search-item]`);
+searchedStock.addEventListener(`keyup`, () => {
+  let searchfilter = stock.filter((product) => {
+    return product.name
+      .toLowerCase()
+      .startsWith(searchedStock.value.toLowerCase());
+  });
+  if (searchfilter.length != 0) {
+    pTable.innerHTML = ``;
+    searchfilter.forEach((product) => {
+      pTable.innerHTML += `
+      <div class=" my-3 mx-3 p-3 card bg-black">
+      <img src="${product.image}" class=" card-img-top">
+          <div class="card-body">
+              <h5 class="card-title text-center">${product.name}</h5>
+              <p class="card-text text-center">${product.category}</p>
+              <p class="card-text text-center">R${product.price}.00</p>
+              <a href="#" class="btn btn-dark d-flex justify-content-center id="btn">Add to Cart</a>
+          </div>
+      </div>
+      `;
+    });
+  } else {
+    pTable.innerHTML = `<div class="text-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>`;
+  }
+});
+
+let sorting = document.querySelector(`[sort-stock]`);
+
+sorting.addEventListener(`click`, () => {
+  try {
+    stock.sort((argument1, argument2) => {
+      return argument2.price - argument1.price;
+    });
+    displayStock(stock);
+  } catch (e) {}
+});
+
+// Get a reference to the sorting button
+
+// searchedStock.addEventListener(`keyup`, ()=>{
+//   try{
+//     let searchWord = searchedStock.value
+//     let stockDisplayed =  stock.filter( product=>{
+//       return product.name.toLowerCase().includes(searchWord.toLowerCase())
+//     })
+//     console.log(stockDisplayed);
+//     if (stockDisplayed) {
+//       displayStock(stockDisplayed)
+//     }else {
+//       stockWrapper.innerHTML = `Stock Not Found`
+//     }
+//   }catch(e) {
+//     stockWrapper.innerHTML = `Try Again`
+//   }
+// })

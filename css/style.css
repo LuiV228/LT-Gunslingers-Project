@@ -34,9 +34,10 @@ body {
 form :is(input) {
   color: #000 !important;
 }
-#searchbar {
+#sort {
   background-color: #ffd600 !important;
   color: #000 !important;
+  width: 30% !important;
 }
 h2 :is(span) {
   display: block;
@@ -77,14 +78,14 @@ i {
   padding-top: 20px;
 }
 .card {
-  width: 15%;
+  width: 16%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #000;
   border-radius: 10px;
 }
-#products {
+#stock {
   display: flex;
   flex-direction: row;
   justify-content: center;
