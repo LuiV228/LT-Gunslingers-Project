@@ -1,5 +1,8 @@
 document.querySelector(`#currentYear`).textContent =
   new Date().getUTCFullYear();
+  
+  // empty array for cart
+  let cart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
 
 let pTable = document.querySelector("[data-stock]");
 // console.log(pTable)
@@ -366,7 +369,7 @@ function displayStock(data) {
   pTable.innerHTML = "";
   if (data.length) {
     // loop through the product in array
-    data.forEach((product) => {
+    data.forEach((product, index) => {
       // Add product HTML to the productTable
       pTable.innerHTML += `
             <div class=" my-3 mx-3 p-3 card bg-black">
@@ -375,7 +378,7 @@ function displayStock(data) {
                     <h5 class="card-title text-center">${product.name}</h5>
                     <p class="card-text text-center">${product.category}</p>
                     <p class="card-text text-center">R${product.price}.00</p>
-                    <a href="#" class="btn btn-dark d-flex justify-content-center id="btn">Add to Cart</a>
+                    <button href="#" value="${index}" class="btn btn-dark d-flex data-toCart justify-content-center id="btn">Add to Cart</button>
                 </div>
             </div>
             `;
@@ -383,7 +386,8 @@ function displayStock(data) {
   }
   // Display Spinner
   else {
-    pTable.innerHTML = `<div class="text-center">
+    pTable.innerHTML = `
+    <div class="text-center">
         <div class="spinner-border" role="status">
           <span class="sr-only"></span>
         </div>
@@ -404,7 +408,7 @@ searchedStock.addEventListener(`keyup`, () => {
   });
   if (searchfilter.length != 0) {
     pTable.innerHTML = ``;
-    searchfilter.forEach((product) => {
+    searchfilter.forEach((product, index) => {
       pTable.innerHTML += `
       <div class=" my-3 mx-3 p-3 card bg-black">
       <img src="${product.image}" class=" card-img-top">
@@ -412,7 +416,7 @@ searchedStock.addEventListener(`keyup`, () => {
               <h5 class="card-title text-center">${product.name}</h5>
               <p class="card-text text-center">${product.category}</p>
               <p class="card-text text-center">R${product.price}.00</p>
-              <a href="#" class="btn btn-dark d-flex justify-content-center id="btn">Add to Cart</a>
+              <button href="#" value='${index}' type="button" class="btn btn-dark d-flex justify-content-center" data-toCart id="btn">Add to Cart</button>
           </div>
       </div>
       `;
@@ -437,21 +441,21 @@ sorting.addEventListener(`click`, () => {
   } catch (e) {}
 });
 
-// Get a reference to the sorting button
 
-// searchedStock.addEventListener(`keyup`, ()=>{
-//   try{
-//     let searchWord = searchedStock.value
-//     let stockDisplayed =  stock.filter( product=>{
-//       return product.name.toLowerCase().includes(searchWord.toLowerCase())
-//     })
-//     console.log(stockDisplayed);
-//     if (stockDisplayed) {
-//       displayStock(stockDisplayed)
-//     }else {
-//       stockWrapper.innerHTML = `Stock Not Found`
-//     }
-//   }catch(e) {
-//     stockWrapper.innerHTML = `Try Again`
-//   }
-// })
+
+// function to add prod to cart
+function toCart(index){
+  // push the items from the current localStorage array into the cart array
+  cart.push(stock[index])
+
+  // set the cart array into localstorage
+  localStorage.setItem('cart', JSON.stringify(cart))
+}
+
+// add an event listener to your html element that displays the products
+pTable.addEventListener('click', function(event) {
+  // console.log(event.target.innerHTML == 'Add to Cart');
+  if(event.target.innerHTML == 'Add to Cart'){
+    toCart(event.target.value)
+  }
+})

@@ -95,3 +95,24 @@ i {
   background-color: #000;
   color: #ffd600;
 }
+#checkoutImage {
+  width: 15%;
+  height: 15%;
+}
+#tableSpacing {
+  object-fit: cover;
+}
+#totalPrice {
+  background-color: black;
+  color: #ffd600;
+}
+#totalPrices {
+  background-color: black;
+  color: #ffd600;
+  padding: 10px;
+  border-radius: 20px;
+  padding-top: 1.25%;
+  display: flex;
+  flex-direction: row;
+  object-fit: contain;
+}
