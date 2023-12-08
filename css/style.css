@@ -162,3 +162,21 @@ i {
   margin-left: 40.5%;
   margin-bottom: 5%;
 }
+.display-2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.text-center{
+  width: 90%;
+  background-color: #000;
+  color: #ffd600;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-left: 70px;
+  margin-bottom: 50px;
+  border-radius: 50px;
+}
