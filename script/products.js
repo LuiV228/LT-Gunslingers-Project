@@ -375,9 +375,9 @@ function displayStock(data) {
             <div class=" my-3 mx-3 p-3 card bg-black">
             <img src="${product.image}" class=" card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title text-center">${product.name}</h5>
-                    <p class="card-text text-center">${product.category}</p>
-                    <p class="card-text text-center">R${product.price}.00</p>
+                    <h5 class="card-title text-center-1">${product.name}</h5>
+                    <p class="card-text text-center-1">${product.category}</p>
+                    <p class="card-text text-center-1">R${product.price}.00</p>
                     <button href="#" value="${index}" class="btn btn-dark d-flex data-toCart justify-content-center id="btn">Add to Cart</button>
                 </div>
             </div>
