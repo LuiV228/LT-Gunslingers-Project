@@ -366,7 +366,7 @@ let stock = JSON.parse(localStorage.getItem(`products`))
     );
 
 function displayStock(data) {
-  pTable.innerHTML = "";
+  pTable.innerHTML = ``;
   if (data.length) {
     // loop through the product in array
     data.forEach((product, index) => {

@@ -102,6 +102,7 @@ i {
 #tableSpacing {
   object-fit: cover;
 }
+
 #totalPrice {
   background-color: black;
   color: #ffd600;
@@ -115,4 +116,49 @@ i {
   display: flex;
   flex-direction: row;
   object-fit: contain;
+}
+.adminTable {
+  background-color: #000;
+  color: #ffd600;
+  border: solid #ffd600;
+  font-size: 20px;
+  width: 100%;
+}
+#adminImage {
+  width: 25%;
+  height: 25%;
+}
+#adminTableSpacing {
+  object-fit: cover;
+}
+.col-id {
+  width: 10%;
+}
+.col-headings {
+  width: 15%;
+}
+.checkoutButtons {
+  background-color: #000;
+  color: #ffd600;
+  padding: 5px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.adminButtons {
+  background-color: #000;
+  color: #ffd600;
+  margin-right: 20px;
+}
+.formy {
+  background-color: #000;
+  color: #ffd600;
+  padding: 2%;
+  border-radius: 50px;
+  width: 18%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-left: 40.5%;
+  margin-bottom: 5%;
 }
